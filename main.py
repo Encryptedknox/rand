@@ -105,7 +105,7 @@ async def password(bot, update):
             keys = "abcdefghijklmnopqrstuvwxyz"+"1234567890"+"!@#$%^&*()_+".lower()
             limit = int(update.text)
     except:
-        await message.edit_text('Something wrong')
+        await update.edit_text('Something wrong')
         return
     
     if limit > 100 or limit <= 0:
@@ -114,7 +114,7 @@ async def password(bot, update):
         random_value = "".join(random.sample(password, limit))
         text = f"**Limit :-** `{str(limit)}`.\n**Password :-** `{random_value}`**\n\nJoin @EKBOTZ_UPDATE"
     
-    await message.edit_text(text, True)
+    await update.edit_text(text, True)
 
 
 Bot.run()
