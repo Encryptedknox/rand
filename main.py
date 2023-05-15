@@ -96,7 +96,7 @@ async def about(bot, update):
 @Bot.on_message(filters.private & filters.text)
 async def password(bot, update):
     
-    update = await update.reply_text('`Processing...`')
+    message = await update.reply_text('`Processing...`')
     
     try:
         if len(update.text.split()) > 1:
