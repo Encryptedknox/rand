@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 Bot = Client(
     "Password Generator Bot",
     bot_token=os.environ.get("6138107355:AAFmM8xXb8uabBeacHu_doRpJSbg-ptYJDc"),
-    api_id=os.environ.get("28457125"),
+    api_id=int(os.environ.get("28457125")),
     api_hash=os.environ.get("c25bda5d2624db06db8a1624d4e484ce")
 )
 
